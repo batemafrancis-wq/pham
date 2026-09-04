@@ -13,7 +13,12 @@ export default function LoginPage() {
         <LoginForm />
       </div>
       <div className="photo-frame relative min-h-[420px]">
-        <Image src="/images/senior-review.jpg" alt="Patient reviewing a medication bottle with a pharmacist" fill className="object-cover" />
+        <Image
+          src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80"
+          alt="Patient reviewing a medication bottle with a pharmacist"
+          fill
+          className="object-cover"
+        />
       </div>
     </main>
   );

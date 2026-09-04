@@ -9,15 +9,20 @@ import { money } from "@/lib/money";
 import { CartControls } from "@/components/cart-controls";
 import { IconAlert } from "@/components/icons";
 
+type ProductRow = typeof products.$inferSelect;
+type CartItemRow = typeof cartItems.$inferSelect;
+
 export const dynamic = "force-dynamic";
 
 export default async function CartPage() {
   const sessionId = await getSessionId();
-  const items = await db.select().from(cartItems).where(eq(cartItems.sessionId, sessionId));
-  const catalog = await db.select().from(products);
-  const byId = Object.fromEntries(catalog.map((p) => [p.id, p]));
+  const items: CartItemRow[] = await db.select().from(cartItems).where(eq(cartItems.sessionId, sessionId));
+  const catalog: ProductRow[] = await db.select().from(products);
+  const byId: Record<number, ProductRow> = Object.fromEntries(
+    catalog.map((p: ProductRow) => [p.id, p]),
+  ) as Record<number, ProductRow>;
   const lines = items
-    .map((item) => {
+    .map((item: CartItemRow) => {
       const product = byId[item.productId];
       if (!product) return null;
       return { ...item, product };

@@ -25,7 +25,12 @@ export default async function PrescriptionCenterPage() {
   return (
     <main>
       <section className="relative overflow-hidden bg-ink text-cream">
-        <Image src="/images/rx-pad.jpg" alt="Prescription pad on a clinical desk" fill className="object-cover opacity-35" />
+        <Image
+          src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1400&q=80"
+          alt="Prescription pad on a clinical desk"
+          fill
+          className="object-cover opacity-35"
+        />
         <div className="relative mx-auto max-w-7xl px-5 py-20">
           <p className="flex items-center gap-2 text-sm uppercase tracking-[0.18em]">
             <IconLock /> HIPAA / data-privacy workspace
@@ -42,19 +47,22 @@ export default async function PrescriptionCenterPage() {
             href: "/prescriptions/upload",
             title: "Upload portal",
             copy: "Drag-and-drop a doctor’s slip. Watch OCR, then confirm the medication, dose, and prescriber.",
-            image: "/images/prescription.jpg",
+            image:
+              "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80",
           },
           {
             href: "/prescriptions/refills",
             title: "Auto-refill manager",
             copy: "Choose 30/60/90-day cadence and whether a courier or a local counter should handle it.",
-            image: "/images/orange-bottles.jpg",
+            image:
+              "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
           },
           {
             href: "/prescriptions/insurance",
             title: "Insurance engine",
             copy: "Real-time copay estimator and co-insurance matrix against Harbor Blue and similar PPO plans.",
-            image: "/images/stamp.jpg",
+            image:
+              "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1200&q=80",
           },
         ].map((card) => (
           <Link key={card.href} href={card.href} className="overflow-hidden rounded-3xl bg-white shadow-lg">

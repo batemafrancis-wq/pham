@@ -51,7 +51,12 @@ export default async function RefillPage() {
           />
         </div>
         <div className="photo-frame relative min-h-[360px]">
-          <Image src="/images/pills-hand.jpg" alt="Patient holding a prescription bottle" fill className="object-cover" />
+          <Image
+            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80"
+            alt="Patient holding a prescription bottle"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
     </main>

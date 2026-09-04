@@ -49,7 +49,12 @@ export default async function OrderPage({
         ))}
       </ol>
       <div className="photo-frame relative mt-10 h-64">
-        <Image src="/images/delivery.jpg" alt="Sealed parcel being handed to a patient" fill className="object-cover" />
+        <Image
+          src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
+          alt="Sealed parcel being handed to a patient"
+          fill
+          className="object-cover"
+        />
       </div>
       <Link href="/dashboard" className="btn btn-ghost mt-8">
         Return to sanctuary

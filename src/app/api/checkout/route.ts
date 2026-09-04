@@ -5,6 +5,9 @@ import { ensureSeed } from "@/db/seed";
 import { findInteractions, severityRank } from "@/lib/interactions";
 import { getPatient, getSessionId } from "@/lib/session";
 
+type ProductRow = typeof products.$inferSelect;
+type CartItemRow = typeof cartItems.$inferSelect;
+
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
@@ -26,13 +29,15 @@ export async function POST(request: Request) {
     return Response.json({ error: "OTP did not match. Use sandbox code 4821." }, { status: 400 });
   }
 
-  const items = await db.select().from(cartItems).where(eq(cartItems.sessionId, sessionId));
+  const items: CartItemRow[] = await db.select().from(cartItems).where(eq(cartItems.sessionId, sessionId));
   if (items.length === 0) {
     return Response.json({ error: "Cart is empty" }, { status: 400 });
   }
-  const catalog = await db.select().from(products);
-  const byId = Object.fromEntries(catalog.map((p) => [p.id, p]));
-  const interactions = await findInteractions(items.map((i) => i.productId));
+  const catalog: ProductRow[] = await db.select().from(products);
+  const byId: Record<number, ProductRow> = Object.fromEntries(
+    catalog.map((p: ProductRow) => [p.id, p]),
+  ) as Record<number, ProductRow>;
+  const interactions = await findInteractions(items.map((i: CartItemRow) => i.productId));
   const serious = interactions.some((hit) => severityRank(hit.severity) >= 2);
   if (serious && !body.consultAcknowledged) {
     return Response.json({ error: "A pharmacist consult acknowledgement is required for this basket." }, { status: 400 });

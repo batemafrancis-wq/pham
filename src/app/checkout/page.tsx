@@ -5,6 +5,9 @@ import { getPatient, getSessionId } from "@/lib/session";
 import { findInteractions } from "@/lib/interactions";
 import { CheckoutPipeline } from "@/components/checkout-pipeline";
 
+type ProductRow = typeof products.$inferSelect;
+type CartItemRow = typeof cartItems.$inferSelect;
+
 export const dynamic = "force-dynamic";
 
 export default async function CheckoutPage() {
@@ -12,12 +15,14 @@ export default async function CheckoutPage() {
     getSessionId(),
     getPatient(),
     db.select().from(stores),
-    db.select().from(products),
+    db.select().from(products) as Promise<ProductRow[]>,
   ]);
-  const items = await db.select().from(cartItems).where(eq(cartItems.sessionId, sessionId));
-  const byId = Object.fromEntries(catalog.map((p) => [p.id, p]));
+  const items: CartItemRow[] = await db.select().from(cartItems).where(eq(cartItems.sessionId, sessionId));
+  const byId: Record<number, ProductRow> = Object.fromEntries(
+    catalog.map((p: ProductRow) => [p.id, p]),
+  ) as Record<number, ProductRow>;
   const lines = items
-    .map((item) => {
+    .map((item: CartItemRow) => {
       const product = byId[item.productId];
       if (!product) return null;
       return {

@@ -10,12 +10,42 @@ import { IconArrow, IconCheck, IconShield, IconSnowflake, IconTruck } from "@/co
 export const dynamic = "force-dynamic";
 
 const symptoms = [
-  { label: "Cough & cold", href: "/marketplace?symptom=cold", image: "/images/cold.jpg" },
-  { label: "Pain & fever", href: "/marketplace?symptom=pain", image: "/images/pills-blue.jpg" },
-  { label: "Allergy season", href: "/marketplace?symptom=allergy", image: "/images/pills-white.jpg" },
-  { label: "Blood pressure", href: "/marketplace?category=chronic", image: "/images/bp.jpg" },
-  { label: "Diabetes kit", href: "/marketplace?symptom=diabetes", image: "/images/glucose.jpg" },
-  { label: "Sleep & recovery", href: "/marketplace?symptom=sleep", image: "/images/capsules-jar.jpg" },
+  {
+    label: "Cough & cold",
+    href: "/marketplace?symptom=cold",
+    image:
+      "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Pain & fever",
+    href: "/marketplace?symptom=pain",
+    image:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Allergy season",
+    href: "/marketplace?symptom=allergy",
+    image:
+      "https://images.unsplash.com/photo-1607619056574-7b8d0f4c1d9a?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Blood pressure",
+    href: "/marketplace?category=chronic",
+    image:
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Diabetes kit",
+    href: "/marketplace?symptom=diabetes",
+    image:
+      "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Sleep & recovery",
+    href: "/marketplace?symptom=sleep",
+    image:
+      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80",
+  },
 ];
 
 export default async function HomePage() {
@@ -32,7 +62,7 @@ export default async function HomePage() {
     <main>
       <section className="relative min-h-[88vh] overflow-hidden bg-ink text-cream">
         <Image
-          src="/images/hero-pharmacy.jpg"
+          src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80"
           alt="Pharmacists working at a Clarion clinical counter"
           fill
           priority
@@ -82,7 +112,7 @@ export default async function HomePage() {
             </div>
             <div className="photo-frame relative h-64">
               <Image
-                src="/images/hero-consult.jpg"
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80"
                 alt="Pharmacist handing a verified bottle to a patient"
                 fill
                 className="object-cover"
@@ -143,7 +173,7 @@ export default async function HomePage() {
       <section className="bg-cream py-16">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-2">
           <div className="photo-frame relative min-h-[420px]">
-            <Image src="/images/pharmacist.jpg" alt="Clarion pharmacist in the clinical bay" fill className="object-cover" />
+            <Image src="https://images.unsplash.com/photo-1538108149393-fbbd81895977?auto=format&fit=crop&w=1200&q=80" alt="Clarion pharmacist in the clinical bay" fill className="object-cover" />
           </div>
           <div className="flex flex-col justify-center">
             <div className="gold-rule" />
@@ -185,7 +215,12 @@ export default async function HomePage() {
 
       <section className="mx-auto grid max-w-7xl gap-6 px-5 pb-16 lg:grid-cols-2">
         <Link href="/telehealth" className="relative min-h-80 overflow-hidden rounded-3xl">
-          <Image src="/images/telehealth.jpg" alt="Pharmacist on a video consult" fill className="object-cover" />
+          <Image
+            src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80"
+            alt="Pharmacist on a video consult"
+            fill
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-ink/45" />
           <div className="absolute bottom-6 left-6 text-cream">
             <p className="uppercase tracking-[0.18em] text-sm">Secure lounge</p>
@@ -193,7 +228,12 @@ export default async function HomePage() {
           </div>
         </Link>
         <Link href="/stores" className="relative min-h-80 overflow-hidden rounded-3xl">
-          <Image src="/images/delivery-courier.jpg" alt="Clinical courier carrying a sealed parcel" fill className="object-cover" />
+          <Image
+            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
+            alt="Clinical courier carrying a sealed parcel"
+            fill
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-ink/45" />
           <div className="absolute bottom-6 left-6 text-cream">
             <p className="uppercase tracking-[0.18em] text-sm">Fulfillment</p>

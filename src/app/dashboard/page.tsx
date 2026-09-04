@@ -54,7 +54,12 @@ export default async function DashboardPage() {
           </div>
         </div>
         <div className="photo-frame relative min-h-[260px]">
-          <Image src="/images/patient-tablet.jpg" alt="Patient reviewing medications during a virtual visit" fill className="object-cover" />
+          <Image
+            src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=1200&q=80"
+            alt="Patient reviewing medications during a virtual visit"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
 

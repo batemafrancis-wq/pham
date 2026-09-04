@@ -29,7 +29,12 @@ export default async function UploadPage({
       </div>
       <div className="space-y-5">
         <div className="photo-frame relative min-h-[320px]">
-          <Image src="/images/consult-desk.jpg" alt="Clinician reviewing a prescription with a patient" fill className="object-cover" />
+          <Image
+            src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80"
+            alt="Clinician reviewing a prescription with a patient"
+            fill
+            className="object-cover"
+          />
         </div>
         <div className="rounded-3xl bg-ink p-6 text-cream">
           <h2 className="font-display text-3xl">Safety before price</h2>

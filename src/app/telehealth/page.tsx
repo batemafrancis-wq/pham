@@ -27,7 +27,12 @@ export default async function TelehealthPage() {
   return (
     <main>
       <section className="relative min-h-[42vh] overflow-hidden bg-ink text-cream">
-        <Image src="/images/telehealth.jpg" alt="Clinician on a telehealth video call" fill className="object-cover opacity-40" />
+        <Image
+          src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1400&q=80"
+          alt="Clinician on a telehealth video call"
+          fill
+          className="object-cover opacity-40"
+        />
         <div className="relative mx-auto max-w-7xl px-5 py-20">
           <p className="text-sm uppercase tracking-[0.18em]">Secure telehealth & consultation lounge</p>
           <h1 className="mt-3 max-w-3xl font-display text-5xl md:text-6xl">Talk to a pharmacist without leaving the record.</h1>
@@ -52,7 +57,12 @@ export default async function TelehealthPage() {
           <h2 className="font-display text-4xl">Virtual clinical booking</h2>
           <p className="mt-2 text-lg text-ink-soft">Select a 20-minute video block. Priya Raman, PharmD, BCPS holds the afternoon clinic.</p>
           <div className="relative mb-6 mt-6 h-52 overflow-hidden rounded-3xl">
-            <Image src="/images/telehealth-desk.jpg" alt="Pharmacist at a laptop during clinic hours" fill className="object-cover" />
+            <Image
+              src="https://images.unsplash.com/photo-1538108149393-fbbd81895977?auto=format&fit=crop&w=1200&q=80"
+              alt="Pharmacist at a laptop during clinic hours"
+              fill
+              className="object-cover"
+            />
           </div>
           <BookingMatrix
             bookings={bookings

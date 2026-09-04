@@ -11,19 +11,22 @@ const categories = [
     key: "otc",
     title: "OTC Remedies",
     copy: "Cough & cold, pain relief, allergy, first aid — labeled in 16px+ type.",
-    image: "/images/first-aid-white.jpg",
+    image:
+      "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80",
   },
   {
     key: "chronic",
     title: "Chronic Care",
     copy: "Diabetes supplies, blood pressure monitors, respiratory devices.",
-    image: "/images/bp-use.jpg",
+    image:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
   },
   {
     key: "wellness",
     title: "Vitamins & Wellness",
     copy: "Supplements and medical-grade skincare, with interaction notes.",
-    image: "/images/serum.jpg",
+    image:
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 

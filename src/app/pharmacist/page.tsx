@@ -19,7 +19,12 @@ export default async function PharmacistPage() {
             Review OCR, match identity, and approve or send back a slip. This desk is the human gate before fulfillment.
           </p>
           <div className="photo-frame relative mt-6 min-h-[280px]">
-            <Image src="/images/team.jpg" alt="Pharmacists collaborating at the verification counter" fill className="object-cover" />
+            <Image
+              src="https://images.unsplash.com/photo-1538108149393-fbbd81895977?auto=format&fit=crop&w=1200&q=80"
+              alt="Pharmacists collaborating at the verification counter"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
         <PharmacistDesk

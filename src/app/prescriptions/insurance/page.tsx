@@ -68,7 +68,12 @@ export default async function InsurancePage() {
             </div>
           </div>
           <div className="photo-frame relative min-h-[420px]">
-            <Image src="/images/pharmacist-notes.jpg" alt="Pharmacist documenting insurance verification" fill className="object-cover" />
+            <Image
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80"
+              alt="Pharmacist documenting insurance verification"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       )}
